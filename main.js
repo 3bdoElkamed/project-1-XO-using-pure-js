@@ -9,23 +9,23 @@ document.forms[0].onsubmit = function (e) {
   // check any of player is empty
   e.preventDefault();
   if (playerOneLocal.value != "" && playerTwoLocal.value != "") {
+
     localStorage.setItem("player_one", playerOneLocal.value);
     localStorage.setItem("player_two", playerTwoLocal.value);
+    player_one.innerHTML = localStorage.getItem("player_one");
+    player_two.innerHTML = localStorage.getItem("player_two");
     document.forms[0].classList.remove("active");  // disable form
     tic_toe.classList.add("active");  // active game
   }
 };
-// set Names
-player_one.innerHTML = localStorage.getItem("player_one");
-player_two.innerHTML = localStorage.getItem("player_two");
 
 let next = document.querySelector(".title").childNodes[1]; // get text "Game" and change it to "turn"
+next.nodeValue = " turn";
 let nextTurnText = document.querySelector(".title span");
 
 // choose who is turn Randomly
 let X_O = ["x", "o"];
 let turn = X_O[Math.floor(Math.random() * 2)];
-next.nodeValue = " turn";
 nextTurnText.innerHTML = turn.toUpperCase(); //
 
 
@@ -37,7 +37,7 @@ let newGame = document.querySelector(".message_winning .newGame");
 let restart = document.querySelector(".message_winning .restart");
 
 let board = ["0", "1", "2", "3", "4", "5", "6", "7", "8"]; // Array check
-let board_full = false; // to know the all square is full or
+let board_full = false; // to know the all square is full or not
 
 // every click apply function "game"
 squares.forEach((e) => {
@@ -115,4 +115,3 @@ restart.onclick = function (e) {
 newGame.onclick = function (e) {
   location.reload();
 };
-
