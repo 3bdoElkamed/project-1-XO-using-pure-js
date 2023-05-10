@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>XO Game</title>
+</head>
+<body>
+  <form action="" class="active">
+    <h2>XO Game</h2>
+    <input type="text" class="playerOneLocal input" placeholder="player one">
+    <input type="text" class="playerTwoLocal input" placeholder="player Two">
+    <input type="submit" class="submit" value="Play">
+  </form>
+  <div class="tic-toe">
+    <div class="players">
+      <div class="one">Player One: <span>Abdo Ibrahim</span></div>
+      <div class="two">Player Two: <span>Mohamed Yousef</span></div>
+    </div>
+
+    <div class="title"><span>XO</span> Game</div>
+
+    <div class="grid-play">
+      <div class="grid" id="one"> <span cla data-value="0"></span> </div>
+      <div class="grid" id="two"> <span  data-value="1"></span> </div>
+      <div class="grid" id="three"> <span  data-value="2"></span> </div>
+      <div class="grid" id="four"> <span  data-value="3"></span> </div>
+      <div class="grid" id="five"> <span  data-value="4"></span> </div>
+      <div class="grid" id="six"> <span  data-value="5"></span> </div>
+      <div class="grid" id="seven"> <span  data-value="6"></span> </div>
+      <div class="grid" id="eight"> <span  data-value="7"></span> </div>
+      <div class="grid" id="nine"> <span  data-value="8"></span> </div>
+    </div>
+  </div>
+    <div class="message_winning">
+      <div class="winner">Draw!</div>
+      <button class="restart">Restart</button>
+      <button class="newGame">New Game</button>
+    </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
